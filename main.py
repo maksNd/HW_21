@@ -13,14 +13,18 @@ if user_input == '':
     print(request.get_source_string())
 else:
     request = Request(user_input)
+
 destination_point = None
 point_from = None
 
-for point in points:
-    if request.to_place == point:
-        destination_point = point
-    if request.from_place == point:
-        point_from = point
+try:
+    for point in points:
+        if request.to_place == point:
+            destination_point = point
+        if request.from_place == point:
+            point_from = point
+except AttributeError:
+    exit(print('Некорректный запрос'))
 
 if point_from.check_availability(request.product_title, request.product_amount):
     sleep(1)

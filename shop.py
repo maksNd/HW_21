@@ -20,11 +20,3 @@ class Shop(Store):
             return None
         else:
             return 'Free space is over'
-
-
-# sh_1 = Store({'asd': 2}, 5)
-# print(sh_1._capacity)
-# sh_1.add('qwe', 2)
-# print(sh_1._capacity)
-#
-# print(sh_1.get_free_space())

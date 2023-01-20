@@ -39,8 +39,3 @@ class Request:
     @property
     def product_title(self):
         return self._product.lower()
-
-
-# req = Request('Доставить 3 печеньки из склад')
-# print(req)
-# print(req.product_amount)

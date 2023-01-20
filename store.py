@@ -57,10 +57,3 @@ class Store(Storage):
             if item not in result:
                 result.append(item)
         return result
-
-# s_1 = Store({'asd': 2}, 5)
-# print(s_1.get_items())
-# s_1.add('qwe', 2)
-# print(s_1.get_items())
-# s_1.remove('qwe', 1)
-# print(s_1.get_items())
