@@ -24,7 +24,7 @@ try:
         if request.from_place == point:
             point_from = point
 except AttributeError:
-    exit(print('Некорректный запрос'))
+    quit(print('Некорректный запрос'))
 
 if point_from.check_availability(request.product_title, request.product_amount):
     sleep(1)
