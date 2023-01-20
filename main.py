@@ -41,4 +41,4 @@ if point_from.check_availability(request.product_title, request.product_amount):
     sleep(1)
     print(f'{str(point_from).title()} хранит: {point_from.get_items()}')
 else:
-    print('Но нужного количества нет на складе')
+    print('Но нужного количества нет')
