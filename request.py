@@ -12,7 +12,7 @@ class Request:
                 amount = int(request_list[index])
                 self._amount = amount
                 self._product = request_list[index + 1]
-            except Exception:
+            except ValueError:
                 pass
 
     def get_source_string(self):
