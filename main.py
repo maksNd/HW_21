@@ -7,7 +7,6 @@ store = Store({'печеньки': 3, 'собачки': 4, 'коробки': 5},
 shop = Shop({'собачки': 2}, name='магазин')
 points = [shop, store]
 
-user_input = None
 while True:
     user_input = input('\nTap ENTER or "stop" or input your request\n')
     if user_input.lower() == 'stop':
@@ -32,7 +31,7 @@ while True:
 
     if point_from.check_availability(request.product_title, request.product_amount):
         sleep(1)
-        print('Нужное количество есть на складе')
+        print(f'Нужное количество есть в {point_from}')
         sleep(1)
         point_from.remove(request.product_title, request.product_amount)
         destination_point.add(request.product_title, request.product_amount)
@@ -45,4 +44,4 @@ while True:
         sleep(1)
         print(f'{str(point_from).title()} хранит: {point_from.get_items()}')
     else:
-        print('Но нужного количества нет')
+        print(f'Но нужного количества нет в {point_from}')
