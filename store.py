@@ -2,17 +2,20 @@ from abstract_Storage import Storage
 
 
 class Store(Storage):
-    name = 'склад'
 
-    def __init__(self, items={}, capacity=100):
-        self._items = items
+    def __init__(self, items=None, capacity=100, name=''):
+        if items is None:
+            self._items = {}
+        else:
+            self._items = items
         self._capacity = capacity
+        self._name = name
 
     def __repr__(self):
-        return 'склад'
+        return self._name
 
     def __eq__(self, other):
-        return Store.name == other
+        return self._name == other
 
     def check_availability(self, title, amount):
         for item in self._items:

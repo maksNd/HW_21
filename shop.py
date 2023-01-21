@@ -2,16 +2,9 @@ from store import Store
 
 
 class Shop(Store):
-    name = 'магазин'
 
-    def __init__(self, items={}, capacity=20):
-        super().__init__(items, capacity)
-
-    def __repr__(self):
-        return 'магазин'
-
-    def __eq__(self, other):
-        return Shop.name == other
+    def __init__(self, items, capacity=20, name=''):
+        super().__init__(items, capacity, name)
 
     def add(self, title: str, amount: int):
         if self._capacity >= amount and len(self._items.keys()) < 5:

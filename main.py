@@ -3,8 +3,8 @@ from shop import Shop
 from store import Store
 from time import sleep
 
-store = Store({'печеньки': 3, 'собачки': 4, 'коробки': 5})
-shop = Shop({'собачки': 2})
+store = Store({'печеньки': 3, 'собачки': 4, 'коробки': 5}, name='склад')
+shop = Shop({'собачки': 2}, name='магазин')
 points = [shop, store]
 
 user_input = input('Tap ENTER or input your request\n')
